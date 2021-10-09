@@ -53,7 +53,7 @@ This package of methods has been created to bring together in a single package a
  		
     - VirtualBox Ubuntu Server 20.04.2 LTS (Focal Fossa) with PHP7.4.3
 
-    - If you use str_len_ttf() you need to sepecify the path file of your .ttf file. In this example we use DejaVuSnas.ttf file that you can download at https://dejavu-fonts.github.io/. It uses GD library, then your PHP system will need it: sudo apt install php-gd. Note: Note: This function is only available if PHP is compiled with freetype support (--with-freetype-dir=DIR). See https://www.php.net/manual/en/function.imagettfbbox.php
+    - If you use str_len_ttf() you need to sepecify the path file of your .ttf file. In this example we use DejaVuSnas.ttf file that you can download at https://dejavu-fonts.github.io/. It uses GD library, then your PHP system will need it: sudo apt install php-gd. Note: This function is only available if PHP is compiled with freetype support (--with-freetype-dir=DIR). See https://www.php.net/manual/en/function.imagettfbbox.php
  
  
   # FILES:
