@@ -2,7 +2,7 @@
 
 ## V.1.0.0
 
-## You can to use in PHP functions as linspace, pow arrays, ....
+## Functions as linspace(), arrays pow(), in PHP. You can to use in PHP functions as linspace, pow arrays, ....
 
 Class that do some extended operations such math cacls, string calcs, gd calcs. Useful for calculations in graphs, Machine learning processes and others.
 
