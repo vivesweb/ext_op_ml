@@ -25,7 +25,7 @@ This package of methods has been created to bring together in a single package a
  # AN EXAMPLE OF THE USE linspace() & pow() PYPLOT IN PHP:
  
  	// NOTE: The graph library will be published soon. this example is only to see the use of Linspace() & pow()
-	// We assume that $ax in PHP is a graph_object, and call a new ext_op_ml with $m variable
+	// We assume that $ax in PHP is a graph_object, and create an ext_op_ml object in $m variable
  
   	// PYTHON PYPLOT
  	
