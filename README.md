@@ -81,15 +81,15 @@ Example:
  
 Return an array with incremental values with steps. Space between points will be ($end-$start)/($numsamples-1)
      
-     Range of points, specified as a pair of numeric scalars. $start and $end define the interval over which linspace generates the points.
+- Range of points, specified as a pair of numeric scalars. $start and $end define the interval over which linspace generates the points.
      
-     $start and $end can be real or complex and $end can be greater or less than $start. If $end is less than $start, the vector contains descending values.
+- $start and $end can be real or complex and $end can be greater or less than $start. If $end is less than $start, the vector contains descending values.
      
-     If $numsamples is 1, linspace returns $ end.
+- If $numsamples is 1, linspace returns $ end.
      
-     If $numsamples is zero or negative, linspace returns an empty 1-by-0 array.
+- If $numsamples is zero or negative, linspace returns an empty 1-by-0 array.
      
-     If $numsamples is not an integer value, linspace rounds down and returns floor ($numsamples) points.
+- If $numsamples is not an integer value, linspace rounds down and returns floor ($numsamples) points.
  
 *linspace( $start, $end, $numsamples = null )*
 
