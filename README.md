@@ -10,7 +10,7 @@ This package of methods has been created to bring together in a single package a
 
  Python is a widely used language in Machine Learning, but there are few tools in PHP, so different useful tools have been created in this regard to bring Machine Learning closer to the PHP programming language.
  
- The linspace() method appears in almost all python examples, but in php we don't have any function, so now we have this function.
+ The numpy linspace() method appears in almost all pyplot python examples, but in php we don't have any function, so now we have this function.
  
  Graphs in Pyplot are used to visualize the data. A library close to this use is being made in PHP. Some functions are required for this operation, such as going from inches to pixels or going from a hexadecimal color to its values in RGB.
  
@@ -22,7 +22,7 @@ This package of methods has been created to bring together in a single package a
  
  Why ext_op_ml name for this class???? First I wanted to specify it for mathematical functions, but since I needed other functions that were not related to calculations and to add others related to graphical topics, I decided to call it the Machine Learning operations extension: ext_op_ml, but as I have commented previously, its use is beyond the exclusive Machine Learning functions.
  
- # AN EXAMPLE OF THE USE linspace() & pow() PYPLOT IN PHP:
+ # AN EXAMPLE OF THE USE linspace() & pow() numpy PYPLOT IN PHP:
  
  	// NOTE: The graph library will be published soon. this example is only to see the use of Linspace() & pow()
 	// We assume that $ax in PHP is a graph_object, and create an ext_op_ml object in $m variable
