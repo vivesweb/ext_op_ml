@@ -22,6 +22,26 @@ This package of methods has been created to bring together in a single package a
  
  Why ext_op_ml name for this class???? First I wanted to specify it for mathematical functions, but since I needed other functions that were not related to calculations and to add others related to graphical topics, I decided to call it the Machine Learning operations extension: ext_op_ml, but as I have commented previously, its use is beyond the exclusive Machine Learning functions.
  
+ # AN EXAMPLE OF THE USE linspace() & pow() PYPLOT IN PHP:
+ 
+ 	// NOTE: The graph library will be published soon. this example is only to see the use of Linspace() & pow()
+ 
+  	// PYTHON PYPLOT
+ 	
+	x = np.linspace(0, 2, 100)
+	
+	ax.plot(x, x, label='linear')  # Plot some data on the axes.
+	ax.plot(x, x**2, label='quadratic')  # Plot more data on the axes...
+	ax.plot(x, x**3, label='cubic')  # ... and some more.
+ 
+ 	// PHP
+ 	
+	$x = $ext_op_ml->linspace( 0, 2, 100 );
+	
+	$graph->plot( $x, $x, ['label'=>'linear'] );
+	$graph->plot( $x, $ext_op_ml->pow($x, 2), ['label'=>'quadratic'] );
+	$graph->plot( $x, $ext_op_ml->pow($x, 3), ['label'=>'cubic'] );
+ 
  
  # REQUERIMENTS:
  
