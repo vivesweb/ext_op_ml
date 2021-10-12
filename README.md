@@ -1,6 +1,6 @@
 # ext-op-ml. A class whith extension functions for use in Machine Learning processes
 
-## V.1.0.1
+## V.1.0.2
 
 ## Functions as linspace(), arrays pow() and others in PHP
 
@@ -187,6 +187,50 @@ Example:
         $sign = $ext_op->copysign(1, -50);
         
         return float(-1)
+	
+ **FROM V.1.0.2**
+
+- **Added avg()**
+
+ Returns the average in array
+
+*avg($array)*
+
+Example:
+
+        avg([1, 2, 3, 4, 5])
+        return int(3)
+	
+
+- **Added binarySearch()**
+
+ Returns the id in array of searched value. If not found it returns false. NOTE: Be carefull with comparations on id = 0 and id = false. Use: if( binarySearch() === false )
+
+*binarySearch($arr, $x)*
+
+Example:
+
+        binarySearch([1, 2, 3, 4, 5], 4)
+        return int(3)
+	
+
+- **Added freq()**
+
+ Returns the requency defined in range in array of values.
+ 
+ If your array is sored, you can specify it to do a fasted search
+ 
+ You can define if the $max value is included in the range or not
+
+*freq($arrval, $min, $max, $includemax = false, $arrvalsorted = false)*
+
+Example:
+
+        freq([1, 2, 2, 3, 3, 4, 5], 2, 3)
+        return int(2)
+
+        freq([1, 2, 2, 3, 3, 4, 5], 2, 3, true)
+        return int(4)
  
  **Of course. You can use it freely :vulcan_salute::alien:**
  
@@ -201,6 +245,6 @@ Example:
  
  @since October 2021
  
- @version 1.0.1
+ @version 1.0.2
  
  @license GNU General Public License v3.0
