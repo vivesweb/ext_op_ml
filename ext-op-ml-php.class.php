@@ -143,7 +143,7 @@
      * @return int $size_inch * $dpis
      */
     public function inch_2_pixels( $size_inch, $dpis = 72 ){
-        return ( $size_inch * $dpis );
+        return (int)( $size_inch * $dpis );
     } // /inch_2_pixels()
 	
 	
@@ -169,6 +169,20 @@
 
         return [$r, $g, $b];
     } // /hex2rgb()
+
+     /**
+     * Returns the magnitude value with the sign of the sign number
+     * 
+     * Thanks to https://github.com/markrogoyski/math-php/blob/master/src/Arithmetic.php
+     *
+     * @param float $magnitude
+     * @param float $sign
+     *
+     * @return float $magnitude with the sign of $sign
+     */
+    public function copySign(float $magnitude, float $sign){
+        return ( ( $sign >= 0 )?abs( $magnitude ):-abs( $magnitude ) );
+    }
     
 }// /ext_op
 ?>
