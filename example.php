@@ -77,6 +77,26 @@
  var_dump( $ext_op->hex2rgb( '#1f77b4' ) );
  
  echo '<br /><br />';
+ 
+ echo '<br />';
+
+ 
+ echo '<strong>From V.1.0.1:</strong><br />';
+ echo '<strong>-------------------</strong><br />';
+ 
+ echo '<br />';
+ 
+ 
+ echo '<strong>copysign(1, 50)</strong>:<br />';
+ var_dump( $ext_op->copysign(1, 50) );
+ 
+ echo '<br /><br />';
+ 
+ 
+ echo '<strong>copysign(1, -50)</strong>:<br />';
+ var_dump( $ext_op->copysign(1, -50) );
+ 
+ echo '<br /><br />';
  ?>
  </body>
  </html>
