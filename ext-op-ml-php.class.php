@@ -183,6 +183,148 @@
     public function copySign(float $magnitude, float $sign){
         return ( ( $sign >= 0 )?abs( $magnitude ):-abs( $magnitude ) );
     }
+
+    /**
+     * search a number in SORTED array
+     * Return id in array
+     * if not found, return false
+     * NOTE: Be carefull with comparations on id = 0 and id = false.
+     *  Use: if( binarySearch() === false )
+     * 
+     * Thanks to https://www.geeksforgeeks.org/binary-search-php/
+     * 
+     * @param array $arr
+     * @param number $x
+     * @param integer $start
+     * @param integer $end
+     */
+
+    public function binarySearch($arr, $x, $start = 0, $end = null){
+        if( is_null( $end) ){
+            $end = count( $arr );
+        }
+
+        if ($end < $start){
+            return false;
+        }
+        
+        $mid = floor(($end + $start)/2);
+        
+        if ($arr[$mid] == $x) 
+            return $mid;
+        else if ($arr[$mid] > $x) {
+            // call binarySearch on [start, mid - 1]
+            return $this->binarySearch($arr, $x, $start, $mid - 1);
+        } else {
+            // call binarySearch on [mid + 1, end]
+            return $this->binarySearch($arr, $x, $mid + 1, $end);
+        }
+    } // /binarySearch()
+
+
+
+     /**
+     * method to get frequency values in array between $min & $max. $min <= $values < $max
+     * $max is not included in comparation by default. Only lower values that $max will be inside sum of $freq.
+     * Set $includemax to true to include the values equal to $max too.  $min <= $values <= $max
+     * 
+     * @param array $arrval
+     * @param array $min
+     * @param array $max
+     * @param boolean $includemax // if false, values < $max ar included. if true, values <= $max are included
+     * @param boolean $arrvalsorted // if the array is sorted you can to pass true for more speed
+     * @return integer $freq
+     */
+    public function freq( $arrval, $min, $max, $includemax = false, $arrvalsorted = false ){
+        return ( ( $arrvalsorted ) ? $this->freqsorted( $arrval, $min, $max, $includemax ) : $this->frequnsorted( $arrval, $min, $max, $includemax ) );
+    } // /freq()
+
+    
+
+    /**
+     * method to get frequency values in SORTED array between $min & $max. $min <= $values < $max
+     * $max is not included in comparation by default. Only lower values that $max will be inside sum of $freq.
+     * Set $includemax to true to include the values equal to $max too.  $min <= $values <= $max
+     * 
+     * @param array $arrval
+     * @param number $min
+     * @param number $max
+     * @param boolean $includemax // if false, values < $max ar included. if true, values <= $max are included
+     * @return integer $freq
+     */
+    private function freqsorted( $arrval, $min, $max, $includemax = false ){
+        $freq = 0;
+
+        // Binary search
+        // Thanks to https://stackoverflow.com/questions/6553970/find-the-first-element-in-a-sorted-array-that-is-greater-than-the-target
+        $count  = count( $arrval );
+        $low    = 0;
+        $high   = $count;
+
+        while( $low != $high ) {
+            $mid = ($low + $high) / 2;
+            if ($arrval[$mid] < $min) {
+                $low = $mid + 1;
+            }
+            else {
+                $high = $mid;
+            }
+        }
+        /* Now, low and high both point to the element in question. */
+
+        // Find $min in array. It may be that there are minors equal before
+        $i = $low;
+        while( $arrval[$i]>=$min && ($arrval[$i]<$max || ($arrval[$i]==$max && $includemax)) && $i < $count ){
+            ++$freq;
+            ++$i;
+        }
+
+        unset( $count );
+        unset( $low );
+        unset( $high );
+        unset( $mid );
+        unset( $i );
+
+        return $freq;
+    } // /freqsorted()
+
+
+
+    /**
+     * method to get frequency values in UNSORTED array between $min & $max. $min <= $values < $max
+     * $max is not included in comparation by default. Only lower values that $max will be inside sum of $freq.
+     * Set $includemax to true to include the values equal to $max too.  $min <= $values <= $max
+     * 
+     * @param array $arrval
+     * @param number $min
+     * @param number $max
+     * @param boolean $includemax // if false, values < $max ar included. if true, values <= $max are included
+     * @return integer $freq
+     */
+    private function frequnsorted( $arrval, $min, $max, $includemax = false ){
+        $freq = 0;
+
+        foreach($arrval as $val){
+            if( $val>=$min && ($val<$max || ($val==$max && $includemax)) ){
+                ++$freq;
+            }
+        }
+
+        unset( $val );
+
+        return $freq;
+    } // /frequnsorted()
+
+
+
+    /**
+     * Metohd to get a Average of array
+     * @param array $arrval
+     * @return float $avg
+     */
+    public function avg( $arrval ){
+        return array_sum($arrval)/count($arrval);
+    } // /avg()
     
 }// /ext_op
 ?>

@@ -97,6 +97,32 @@
  var_dump( $ext_op->copysign(1, -50) );
  
  echo '<br /><br />';
+ 
+ 
+ echo '<strong>avg([1, 2, 3, 4, 5])</strong>:<br />';
+ var_dump( $ext_op->avg( [1, 2, 3, 4, 5]) );
+ 
+ echo '<br /><br />';
+ 
+ 
+ echo '<strong>freq([1, 2, 2, 3, 3, 4, 5], 2, 3)</strong>:<br />';
+ var_dump( $ext_op->freq( [1, 2, 2, 3, 3, 4, 5], 2, 3) );
+ 
+ echo '<br /><br />';
+ 
+ 
+ echo '<strong>freq([1, 2, 2, 3, 3, 4, 5], 2, 3, true)</strong>:<br />';
+ var_dump( $ext_op->freq( [1, 2, 2, 3, 3, 4, 5], 2, 3, true) );
+ 
+ echo '<br /><br />';
+ 
+ 
+ 
+ 
+ echo '<strong>binarySearch([1, 2, 3, 4, 5], 4)</strong>:<br />';
+ var_dump( $ext_op->binarySearch([1, 2, 3, 4, 5], 4) );
+ 
+ echo '<br /><br />';
  ?>
  </body>
  </html>
