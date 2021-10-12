@@ -1,6 +1,6 @@
 # ext-op-ml. A class whith extension functions for use in Machine Learning processes
 
-## V.1.0.0
+## V.1.0.1
 
 ## Functions as linspace(), arrays pow() and others in PHP
 
@@ -174,6 +174,20 @@ Example (6.4 Inches at 100 dpis's in pixels):
 		hex2rgb( "#1f77b4" ): Color "#1f77b4" in vector of integers RGB:
 		array(3) { [0]=> int(31) [1]=> int(119) [2]=> int(180) }
  
+ **FROM V.1.0.1**
+
+- ** Added copySign()**
+
+ Returns the magnitude value with the sign of the sign number. Thanks to https://github.com/markrogoyski/math-php/blob/master/src/Arithmetic.php
+
+*copySign(float $magnitude, float $sign)*
+
+Example:
+
+        $sign = $ext_op->copysign(1, -50);
+        
+        return float(-1)
+ 
  **Of course. You can use it freely :vulcan_salute::alien:**
  
  By Rafa.
@@ -187,6 +201,6 @@ Example (6.4 Inches at 100 dpis's in pixels):
  
  @since October 2021
  
- @version 1.0.0
+ @version 1.0.1
  
  @license GNU General Public License v3.0
