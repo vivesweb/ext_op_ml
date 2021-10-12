@@ -98,6 +98,14 @@
  
  echo '<br /><br />';
  
+ echo '<br />';
+
+ 
+ echo '<strong>From V.1.0.2:</strong><br />';
+ echo '<strong>-------------------</strong><br />';
+ 
+ echo '<br />';
+ 
  
  echo '<strong>avg([1, 2, 3, 4, 5])</strong>:<br />';
  var_dump( $ext_op->avg( [1, 2, 3, 4, 5]) );
