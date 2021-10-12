@@ -176,7 +176,7 @@ Example (6.4 Inches at 100 dpis's in pixels):
  
  **FROM V.1.0.1**
 
-- ** Added copySign()**
+- **Added copySign()**
 
  Returns the magnitude value with the sign of the sign number. Thanks to https://github.com/markrogoyski/math-php/blob/master/src/Arithmetic.php
 
