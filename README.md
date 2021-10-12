@@ -218,7 +218,7 @@ Example:
 
  Returns the requency defined in range in array of values.
  
- If your array is sored, you can specify it to do a fasted search
+ If your array is sorted, you can specify it to do a fastest search
  
  You can define if the $max value is included in the range or not
 
