@@ -211,7 +211,7 @@
         $mid = floor(($end + $start)/2);
         
         if ($arr[$mid] == $x) 
-            return $mid;
+            return (int)$mid;
         else if ($arr[$mid] > $x) {
             // call binarySearch on [start, mid - 1]
             return $this->binarySearch($arr, $x, $start, $mid - 1);
