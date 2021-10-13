@@ -18,7 +18,7 @@
  * @author {@link https://www.inatica.com/ Inatica}
  * @blog {@link https://rafamartin10.blogspot.com/ Blog Rafael Martin Soto}
  * @since October 2021
- * @version 1.0.0
+ * @version 1.0.3
  * @license GNU General Public License v3.0
  * 
  * */
@@ -98,6 +98,33 @@
             return pow( $values, $exp );
         }
     } // /pow()
+
+
+
+    /**
+     * Calculate max .ttf length in pixels of arry of strings
+     *
+     * @param string $text
+     * @param string $font_path
+     * @param float $text
+     * @param string $font_size
+     * @param float $angle // Default 0 degrees
+     * @return int $max_length
+     */
+    public function arr_max_len_ttf( $arr, $font_path, $font_size, $angle = 0 ){
+        $max_length = 0;
+        foreach( $arr as $key => $value){
+            $length_value = $this->str_len_ttf( $value, $font_path, $font_size );
+            if( $length_value > $max_length ){
+                $max_length = $length_value;
+            }
+        }
+
+        unset( $length_value );
+        unset( $value );
+
+        return $max_length;
+    }// /arr_max_len_ttf()
     
 
     
@@ -122,7 +149,8 @@
      * @param string $font_path
      * @param float $text
      * @param string $font_size
-     * @return float $angle // Default 0 degrees
+     * @param float $angle // Default 0 degrees
+     * @return int $str_len_ttf
      */
     public function str_len_ttf( $text, $font_path, $font_size, $angle = 0 ){
         $font_measures  = imagettfbbox( $font_size, $angle,  $font_path, $text );
