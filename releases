@@ -1,3 +1,6 @@
+2021-10-14 v.1.0.3
+- Added arr_max_len_ttf()
+
 2021-10-12 v.1.0.2
 - Added binarysearch() method
 - Added freq() method (between max & min)
