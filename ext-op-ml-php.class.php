@@ -18,7 +18,7 @@
  * @author {@link https://www.inatica.com/ Inatica}
  * @blog {@link https://rafamartin10.blogspot.com/ Blog Rafael Martin Soto}
  * @since October 2021
- * @version 1.0.5
+ * @version 1.0.4
  * @license GNU General Public License v3.0
  * 
  * */
