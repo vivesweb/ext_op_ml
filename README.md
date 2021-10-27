@@ -1,6 +1,6 @@
 # ext-op-ml. A class whith extension functions for use in Machine Learning processes
 
-## V.1.0.3
+## V.1.0.5
 
 ## Functions as linspace(), arrays pow() and others in PHP
 
@@ -232,7 +232,7 @@ Example:
         freq([1, 2, 2, 3, 3, 4, 5], 2, 3, true)
         return int(4)
 	
-**FROM V.1.0.3**
+**FROM V.1.0.4**
 
 - **Added arr_max_len_ttf()**
 
@@ -246,6 +246,20 @@ Example:
         $font_size  = 10;
 	$arr = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
         $max_length = $this->arr_max_len_ttf( $arr, $font_path, $font_size ); // Return the size in pixels of 'Wednesday', that is the longest string in the array
+	
+**FROM V.1.0.5
+
+
+- **GET THE SIZE IN PIXELS OF height OF STRING IN FONT & SIZE FORMAT GIVEN:**
+
+  In font_path you need to sepecify where is the .ttf file
+
+*str_height_ttf( $text, $font_path, $font_size, $angle = 0 )*
+
+Example:
+
+        $ext_op->str_height_ttf( "Hellow Wold", __DIR__ . "/fonts/dejavu-fonts-ttf-2.37/ttf/DejaVuSans.ttf", 12 )
+        
  
  **Of course. You can use it freely :vulcan_salute::alien:**
  
