@@ -18,7 +18,7 @@
  * @author {@link https://www.inatica.com/ Inatica}
  * @blog {@link https://rafamartin10.blogspot.com/ Blog Rafael Martin Soto}
  * @since October 2021
- * @version 1.0.3
+ * @version 1.0.4
  * @license GNU General Public License v3.0
  * 
  * */
@@ -156,6 +156,37 @@
         $font_measures  = imagettfbbox( $font_size, $angle,  $font_path, $text );
         return abs( $font_measures[2] - $font_measures[0] );
     } // /str_len_ttf()
+    
+
+    
+    /** 
+     * Return Height in pixels of $text with a True Type Font & Size given
+     * 
+     * ex:
+     * str_len_ttf( "Hellow Wold", __DIR__ . "/fonts/dejavu-fonts-ttf-2.37/ttf/DejaVuSans.ttf", 12 ): Height in pixels of "Hellow Wold" string, with DejaVuSans & size 12:
+     *   int(100)
+     *
+     * Note: Better to get here to remember returned values of imagettfbbox():
+     * 0	lower left corner, X position
+     * 1	lower left corner, Y position
+     * 2	lower right corner, X position
+     * 3	lower right corner, Y position
+     * 4	upper right corner, X position
+     * 5	upper right corner, Y position
+     * 6	upper left corner, X position
+     * 7	upper left corner, Y position
+     *
+     * @param string $text
+     * @param string $font_path
+     * @param float $text
+     * @param string $font_size
+     * @param float $angle // Default 0 degrees
+     * @return int $str_len_ttf
+     */
+    public function str_height_ttf( $text, $font_path, $font_size, $angle = 0 ){
+        $font_measures  = imagettfbbox( $font_size, $angle,  $font_path, $text );
+        return abs( $font_measures[3] - $font_measures[1] );
+    } // /str_height_ttf()
 
 
 
