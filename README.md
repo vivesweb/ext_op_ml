@@ -250,7 +250,7 @@ Example:
 **FROM V.1.0.4**
 
 
-- **GET THE SIZE IN PIXELS OF height OF STRING IN FONT & SIZE FORMAT GIVEN:**
+- **GET THE SIZE IN PIXELS OF HEIGHT OF STRING IN FONT & SIZE FORMAT GIVEN:**
 
   In font_path you need to sepecify where is the .ttf file
 
