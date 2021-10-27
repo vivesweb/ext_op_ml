@@ -384,6 +384,17 @@
     public function avg( $arrval ){
         return array_sum($arrval)/count($arrval);
     } // /avg()
+
+
+
+    /**
+     * Metohd to check if array is associative array
+     * @param array $var
+     * @return boolean $is_assoc
+     */
+    function is_assoc($var){
+            return is_array($var) && array_diff_key($var,array_keys(array_keys($var)));
+    } // /is_assoc()
     
 }// /ext_op
 ?>
