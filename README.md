@@ -259,6 +259,16 @@ Example:
 Example:
 
         $ext_op->str_height_ttf( "Hellow Wold", __DIR__ . "/fonts/dejavu-fonts-ttf-2.37/ttf/DejaVuSans.ttf", 12 )
+
+
+- **GET IF ARRAY IS ASSOCIATIVE ARRAY:**
+
+*is_assoc( $arr )*
+
+Example:
+
+        $ext_op->is_assoc( [10, 20, 30] ) // Return false
+	$ext_op->is_assoc( ['Morning' = 10, 'Afternoon' => 20, 'Night' => 30] ) // Return true
         
  
  **Of course. You can use it freely :vulcan_salute::alien:**
