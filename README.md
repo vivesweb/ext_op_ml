@@ -1,6 +1,6 @@
 # ext-op-ml. A class whith extension functions for use in Machine Learning processes
 
-## V.1.0.5
+## V.1.0.4
 
 ## Functions as linspace(), arrays pow() and others in PHP
 
@@ -232,7 +232,7 @@ Example:
         freq([1, 2, 2, 3, 3, 4, 5], 2, 3, true)
         return int(4)
 	
-**FROM V.1.0.4**
+**FROM V.1.0.3**
 
 - **Added arr_max_len_ttf()**
 
@@ -247,7 +247,7 @@ Example:
 	$arr = [ 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'];
         $max_length = $this->arr_max_len_ttf( $arr, $font_path, $font_size ); // Return the size in pixels of 'Wednesday', that is the longest string in the array
 	
-**FROM V.1.0.5
+**FROM V.1.0.4**
 
 
 - **GET THE SIZE IN PIXELS OF height OF STRING IN FONT & SIZE FORMAT GIVEN:**
@@ -274,6 +274,6 @@ Example:
  
  @since October 2021
  
- @version 1.0.3
+ @version 1.0.4
  
  @license GNU General Public License v3.0
