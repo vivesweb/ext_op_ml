@@ -1,3 +1,6 @@
+2021-10-30 v.1.0.5
+- Added arrdatasetcol()
+
 2021-10-27 v.1.0.4
 - Added str_height_ttf()
 - Added is_assoc()
