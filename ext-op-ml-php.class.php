@@ -395,6 +395,31 @@
     function is_assoc($var){
             return is_array($var) && array_diff_key($var,array_keys(array_keys($var)));
     } // /is_assoc()
+
+
+
+    /**
+     * Metohd to return array of $col_id $dataset
+     * @param array $dataset
+     * @param array $col_id
+     * @param boolean $skipnrows
+     * @return boolean $arrdatasetcol
+     */
+    function arrdatasetcol($dataset, $col_id, $skipnrows = 0){
+            $countrows = count( $dataset );
+            $countrows -= $skipnrows;
+            
+            $arrdatasetcol = [];
+
+            for( $i=0; $i<$countrows; $i++ ){
+                $arrdatasetcol[] = $dataset[$i+$skipnrows][$col_id];
+            }
+
+            unset( $countrows );
+            unset( $i );
+
+            return $arrdatasetcol;
+    } // /arrdatasetcol()
     
 }// /ext_op
 ?>
