@@ -281,7 +281,7 @@ Example:
 
 Example:
 
-        $arrdatasetcol = $ext_op->arrdatasetcol( $dataset, 1 ); // Dataset is array of csv, for example, And 1 is for skip first row if is col names
+        $arrdatasetcol = $ext_op->arrdatasetcol( $dataset, 4, 1 ); // Dataset is array of csv, for example, 4 is 5th row (begin with col id 0), and 1 is for skip first row if is col names
  
  **Of course. You can use it freely :vulcan_salute::alien:**
  
