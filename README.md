@@ -296,6 +296,6 @@ Example:
  
  @since October 2021
  
- @version 1.0.4
+ @version 1.0.5
  
  @license GNU General Public License v3.0
