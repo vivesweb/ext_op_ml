@@ -1,6 +1,6 @@
 # ext-op-ml. A class whith extension functions for use in Machine Learning processes
 
-## V.1.0.4
+## V.1.0.5
 
 ## Functions as linspace(), arrays pow() and others in PHP
 
@@ -269,7 +269,19 @@ Example:
 
         $ext_op->is_assoc( [10, 20, 30] ) // Return false
 	$ext_op->is_assoc( ['Morning' = 10, 'Afternoon' => 20, 'Night' => 30] ) // Return true
-        
+        **FROM V.1.0.4**
+
+**FROM V.1.0.5**
+
+- **GET ARRAY OF ID_COL OF DATASET:**
+
+  Return an array of one col of dataset given by id_col. You can skip rows (for example when first row is the name of the cols)
+
+*arrdatasetcol($dataset, $col_id, $skipnrows = 0)*
+
+Example:
+
+        $arrdatasetcol = $ext_op->arrdatasetcol( $dataset, 1 ); // Dataset is array of csv, for example, And 1 is for skip first row if is col names
  
  **Of course. You can use it freely :vulcan_salute::alien:**
  
